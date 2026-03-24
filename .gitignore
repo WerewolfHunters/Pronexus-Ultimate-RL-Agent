@@ -1,0 +1,6 @@
+﻿.venv/
+__pycache__/
+.pytest_cache/
+models/q_table.pkl
+*.pyc
+description.md
