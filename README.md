@@ -1,5 +1,7 @@
 ﻿# Expert Verification Engine
 
+[Click Here for Video demo](https://www.loom.com/share/54c6a5ef38294e6cb857de83621fa470)
+
 ## 1) What This Project Solves
 
 This project detects a specific fraud pattern in hiring workflows: candidates using AI tools to produce polished expert answers that do not reflect real hands-on experience.
