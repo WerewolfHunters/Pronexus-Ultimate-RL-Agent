@@ -63,10 +63,14 @@ Each signal is normalized to [0, 1], where higher means more fraud-like behavior
 ### 3.3 Final FPS Formula
 
 Weighted base score:
+```bash
 (S1*8 + S2*9 + S3*8 + S4*9 + S5*7 + S6*7 + S7*6 + S8*6) / 60
+```
 
 Then:
+```bash
 FPS = min(base_score * tripwire_multiplier, 1.0)
+```
 
 Risk bands:
 - CLEAN: < 0.35
@@ -163,18 +167,26 @@ The app has 3 tabs:
 ## 8) Installation and Setup (Windows PowerShell)
 
 Step 1: Create virtual environment
+```bash
 python -m venv .venv
+```
 
 Step 2: Activate environment
+```bash
 .\.venv\Scripts\Activate.ps1
+```
 
 Step 3: Install dependencies
+```bash
 python -m pip install --upgrade pip
 pip install -r requirements.txt
+```
 
 Step 4: Download language assets
+```bash
 python -c "import nltk; nltk.download('punkt')"
 python -m spacy download en_core_web_sm
+```
 
 Note:
 If spaCy model download is blocked by network policy, the code falls back to a blank English pipeline automatically.
@@ -182,13 +194,19 @@ If spaCy model download is blocked by network policy, the code falls back to a b
 ## 9) Run the System
 
 Generate sample data:
+```bash
 python scripts/generate_sample_data.py
+```
 
 Train RL agent:
+```bash
 python scripts/train_agent.py
+```
 
 Start UI:
+```bash
 streamlit run app.py
+```
 
 ## 10) Run Tests
 
